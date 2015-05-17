@@ -22,7 +22,7 @@ function detection_release()
 	lsb_release -a > distribution.txt;
 	grep "Distributor "  distribution.txt | gawk '{print $3}' > distribution2.txt;
 	distribution=`cat distribution2.txt`;
-	echo "Votre distribution est: $distribution" ;
+	echo "Your distribution is: $distribution" ;
 }
 function detection_cat ()
 {	
@@ -31,7 +31,7 @@ function detection_cat ()
 	else
 	d=`cat /etc/*-release | grep -i id= ` ;
 	distribution=`echo ${d#*=}` ;
-	echo "Votre distribution est: $distribution" 
+	echo "Your distribution is: $distribution" 
 	fi
 }
 level
